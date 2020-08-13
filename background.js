@@ -1,6 +1,6 @@
 var interval = 60000;
 var refresh = function() {
-    var url = localStorage["url"] || "https://www.commafeed.com";
+    var url = "https://www.commafeed.com";
 	if (url.lastIndexOf('/') != url.length - 1) {
 	  url += '/';
 	}
@@ -18,13 +18,13 @@ var refresh = function() {
 	  } else {
 	    chrome.browserAction.setBadgeText({ text: '?' });
 	  }
-	}
+	};
 	xhr.send();
 	setTimeout(refresh, interval);
-}
+};
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-  var url = localStorage["url"] || "https://www.commafeed.com";
+  var url = "https://www.commafeed.com";
   if (url.lastIndexOf('/') != url.length - 1) {
 	  url += '/';
   }
@@ -41,4 +41,3 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 
 refresh();
-
