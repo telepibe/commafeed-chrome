@@ -1,13 +1,12 @@
 {
   "manifest_version": 2,
 
-  "name": "CommaFeed",
+  "name": "CommaJuani",
   "icons": {
     "128": "icon128.png"
   },
-  "description": "CommaFeed Chrome extension",
+  "description": "CommaFeed Juani extension",
   "version": "1.4",
-  "options_page": "options.html",
 
   "browser_action": {
     "default_icon": "icon.png"
@@ -17,7 +16,6 @@
   },
   "permissions": [
     "tabs",
-    "http://*/*",
-    "https://*/*"
+    "https://www.commafeed.com/*"
   ]
 }
